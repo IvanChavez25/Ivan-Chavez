@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Website</title>
+    <!----CSS link----->
+    <link rel="stylesheet" type="text/css" href="./style/style.css">
+    <script src="http://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Sriracha', cursive;
+    }
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(120deg, #0a3c65 20.69%, #7644ff 50.19%,#fd4766 79.69%);
+    }
+    .header .logo1{
+        font-size: 30px;
+        font-family: 'Sriracha', cursive;
+        text-decoration: none;
+        background: linear-gradient(120deg, #1c99fe 20.69%, #5822ee 50.19%,#ec2647 79.69%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-left: 30px;
+    }
+    a{
+        text-decoration: none;
+    }
+    .hero{
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(120deg, #fe1c94 20.69%, #aaee22 50.19%,#26ec8c 79.69%);
+        background-size: cover;
+    }
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px 100px;
+    }
+    .nav-items a{
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        padding: 35px 20px;
+    }
+    .logo{
+        max-height: 150px;
+        border: 4px solid rgb(255, 255, 255);
+        border-radius: 20px;
+        margin: 20px;
+    }
+    .logo1{
+        max-height: 150px;
+    }
+    nav ul li{
+        list-style: none;
+        display: inline-block;
+        padding: 10px 20px;
+    }
+    nav ul li a{
+        color: #1d1d24;
+        position: relative;
+        padding: 5px 0;
+    }
+    nav ul li a:hover{
+        color: #fd4766;
+    }
+    nav ul li a:after{
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 0;
+        height: 3px;
+        background: #fd4766;
+        transition: .3s;
+        bottom: 0;
+    }
+    nav ul li a:hover:after{
+        width: 100%;
+    }
+    .content{
+        position: absolute;
+        top: 35%;
+        left: 8%;
+    }
+    .content .title{
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        display: inline-block;
+        margin-bottom: 20px;
+        background: linear-gradient(120deg, #1c99fe 20.69%, #7644ff 50.19%,#fd4766 79.69%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .content h1{
+        color: #ddddf1;
+        font-size: 75px;
+        font-weight: 900;
+        line-height: 90px;
+        text-transform: inherit;
+        width: 70%;
+    }
+    .content h1 span{
+        background: linear-gradient(120deg, #1c99fe 20.69%, #7644ff 50.19%,#fd4766 79.69%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .achievements {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 120px 20px;
+        
+    }
+    .achievements .app1 {
+        width: 100%;
+        height: 50vh;
+        border-radius: 20px;
+        background: url(hobby.jpg);
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 30px;
+    }
+    .achievements .app1 .app1-heading {
+        font-size: 24px;;
+        background: linear-gradient(120deg, #940404 20.69%, #7644ff 50.19%,#fd4766 79.69%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-transform: uppercase;
+        margin: 15px 0;
+    }
+    .achievements .app1 .app1-text {
+        font-size: 23px;
+        background: linear-gradient(120deg, #c01616 20.69%, #209c0a 50.19%,#fd4766 79.69%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin: 15px 0;
+    }
+    .achievements .app2 {
+        width: 100%;
+        height: 50vh;
+        border-radius: 20px;
+        background: url(sports.jpg);
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 30px;
+    }
+    .achievements .app2 .app2-heading {
+        font-size: 24px;
+        background: linear-gradient(120deg, #1c99fe 20.69%, #7644ff 50.19%,#fd4766 79.69%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-transform: uppercase;
+        margin: 15px 0;
+    }
+    .achievements .app2 .app2-text {
+        font-size: 23px;
+        background: linear-gradient(120deg, #058107 10.69%, #17daec 50.19%,#debe1f 79.69%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin: 15px 0;
+    }
+    .achievements .app3 {
+        width: 100%;
+        height: 50vh;
+        border-radius: 20px;
+        background: url(pencil.jpg);
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 30px;
+    }
+    .achievements .app3 .app3-heading {
+        font-size: 24px;
+        background: linear-gradient(120deg, #1c99fe 20.69%, #7644ff 50.19%,#fd4766 79.69%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-transform: uppercase;
+        margin: 15px 0;
+    }
+    .achievements .app3 .app3-text {
+        font-size: 23px;
+        background: linear-gradient(120deg, #1c99fe 20.69%, #7644ff 50.19%,#fd4766 79.69%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin: 15px 0;
+    }
+    .Side-Links {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 40px 0;
+    }
+    .Side-Links .links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 40px;
+    }
+    .Side-Links .links span {
+        font-size: 15px;
+        color: #585858;
+        text-transform: uppercase;
+        margin: 10px 0;
+    }
+    .Side-Links .links a {
+        text-decoration: none;
+        color: #585858;
+        padding: 10px 20px;
+    }
+    .hero2{
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(120deg, #fe1c94 20.69%, #aaee22 50.19%,#26ec8c 79.69%);
+        background-size: cover;
+    }
+    .about-me {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 70px 100px;
+    }
+    .about-me img {
+      width: 500px;
+      max-width: 100%;
+      height: auto;
+      border-radius: 20px;
+    }
+    .about-me-text h2 {
+      font-size: 30px;
+      color: #333333;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .about-me-text p {
+      font-size: 23px;
+      color: #302e2e;
+      margin: 10px 0;
+    }
+    </style>
+</head>
+    <body>
+        <header class="header">
+            <a href="#" class="logo1">IVAN LOUIGE H. CHAVEZ</a>
+            <nav class="nav-items">
+                <img src="ivan.JPG" class="logo">
+            </nav>
+        </header>
+        <div class="hero">
+            <div class="content">
+                <span class="title">IT 3RD YEAR STUDENT</span>
+                <h1>Hello, I’m <span>IVAN</span></h1>
+                <div class="achievements">
+                    <div class="app1">
+                        <p class="app1-heading">HOBBIES</p>
+                        <p class="app1-text">I have a lot of hobbies. My hobbies are playing mobile games, watching K-dramas and C-dramas, and biking with friends.</p>
+                    </div>
+                    <div class="app2">
+                        <p class="app2-heading">SPORTS</p>
+                        <p class="app2-text">I have a lot of sports I play, and I am good at them. Basketball, badminton, baseball, and volleyball were among the sports I participated in.</p>
+                    </div>
+                    <div class="app3">
+                        <p class="app3-heading">TALENTS</p>
+                        <p class="app3-text">I have some talents. One of them is drawing. I am very good at drawing, and I am always ready to learn some new ideas in drawing.</p>
+                    </div>
+                    <div class="Side-Links">
+                        <div class="links">
+                        <span>Social Media</span>
+                            <a href="https://www.facebook.com/ivanlouige.h.chavez/"><i class="fab fa-facebook"></i></a>
+                            <a href="https://twitter.com/Louige9"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/ivanlouige/?hl=en"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero2">
+            <div class="about-me">
+                <div class="about-me-text">
+                  <h1>About Me</h1>
+                  <p>I'm Ivan Louige H. Chavez, 21 years of age and a resident of Sitio Tangisan, Libjo, Batangas City. I'm currently a third-year student at Batangas State University, Alangilan Campus. My course here at BSU is Information Technology Major in Business Analytics.</p>
+                </div>
+                <img src="louige.jpg">
+            </div>
+        </div>
+    </body>
+</html>
